@@ -1,0 +1,13 @@
+pahoc initMQTT {"serverURI":"tcp://127.0.0.1:8025"}
+
+pahoc connect {"keepAlive":1000, "connectTimeout":40000, "username":"testuser","password":"passwd"}
+
+pahoc pub {"topic": "Command" , "qos":0, "retained":0, "payload":"123"}
+
+pahoc sub {"topic": "Command" , "qos":0}
+
+pahoc unsub {"topic": "Command"}
+
+pahoc disconnect
+
+check line 331

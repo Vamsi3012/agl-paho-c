@@ -1,0 +1,15 @@
+
+{
+	"sources" : 
+	[
+		
+		{
+			"file" : "/home/vgn5kor/Apps/agl-paho-c/agl_paho_binding/src/agl_paho_binding.c"
+		}
+	],
+	"target" : 
+	{
+		"labels" : [ "BINDING" ],
+		"name" : "agl-paho-c"
+	}
+}
