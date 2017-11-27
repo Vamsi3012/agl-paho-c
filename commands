@@ -1,6 +1,6 @@
-pahoc initMQTT {"serverURI":"tcp://127.0.0.1:8025"}
+pahoc initMQTT {"serverURI":"tcp://127.0.0.1:1883"}
 
-pahoc connect {"keepAlive":1000, "connectTimeout":40000, "username":"testuser","password":"passwd"}
+pahoc connect {"keepAlive":1000, "connectTimeout":40000, "username":"sensor1@DEFAULT_TENANT","password":"hono-secret"}
 
 pahoc pub {"topic": "Command" , "qos":0, "retained":0, "payload":"123"}
 

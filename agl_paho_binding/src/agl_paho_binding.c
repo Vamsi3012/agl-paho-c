@@ -139,9 +139,9 @@ void connectServer(afb_req req){
 	AFB_NOTICE("Assigning cleansession");
 	conn_opts.cleansession = 1;
 	AFB_NOTICE("Assigning username");
-	conn_opts.username = "testuser";
+	conn_opts.username = username;
 	AFB_NOTICE("Assigning password");
-	conn_opts.password = "passwd";
+	conn_opts.password = password;
 	AFB_NOTICE("Assigning connectTimeout");
 	connectTimeout = json_object_get_int(connectTimeoutJSON);
 	conn_opts.connectTimeout = connectTimeout;
@@ -191,6 +191,7 @@ void publish(afb_req req){
 	pubmsg.payloadlen = strlen(payload);
 	pubmsg.qos = qos;
 	pubmsg.retained = retained;
+	MQTTClient_setCallbacks(client, NULL, connlost, msgarrvd, delivered);
 	MQTTClient_publishMessage(client, topic, &pubmsg, &token);
 	rc = MQTTClient_waitForCompletion(client, token, conn_opts.connectTimeout);
 
@@ -211,7 +212,7 @@ void subscribe(afb_req req){
 	topic = afb_req_value(req, "topic");
 	qos = atoi(afb_req_value(req, "qos"));
 	AFB_NOTICE("topic is %s, qos is %d", topic, qos);
-	MQTTClient_setCallbacks(client, topic, connlost, msgarrvd, delivered);
+	MQTTClient_setCallbacks(client, NULL, connlost, msgarrvd, delivered);
 	rc = MQTTClient_subscribe(client, topic, qos);
 	if(rc == MQTTCLIENT_SUCCESS){
 		afb_req_success_f(req, NULL, "Subscribed to topic '%s' successfully", topic);
