@@ -12,7 +12,7 @@ afb_event message_arrived_event;
 volatile MQTTClient_deliveryToken deliveredtoken;
 volatile char* payloadptr;
 
-
+/*-------------------Callback functions---------------------*/
 void delivered(void *context, MQTTClient_deliveryToken dt)
 {
     AFB_NOTICE("Message with token value %d delivery confirmed\n", dt);
@@ -55,8 +55,8 @@ int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *m
 void initMQTT (afb_req req){
 	json_object * jobj = afb_req_json(req);
 	json_object * serverJSON, *clientidJSON;
-	const char * serverURI;
-	char * serverURI_b, *clientID;
+	const * serverURI;
+	char *clientID;
 	// Search for serverURI value
 	json_bool success = json_object_object_get_ex(jobj, "serverURI", &serverJSON);
 	if(!success){
@@ -75,14 +75,12 @@ void initMQTT (afb_req req){
 	if(json_object_get_type(clientidJSON) != json_type_string){
 		afb_req_fail(req, "ERROR", "keepAlive is not a string value");
 	}
-	serverURI = json_object_get_string(serverJSON);
-	AFB_NOTICE(serverURI);
 	clientID = strdup(json_object_get_string(clientidJSON));
 	AFB_NOTICE(clientID);
-	serverURI_b = strdup(json_object_get_string(serverJSON));
-	AFB_NOTICE(serverURI_b);
-
-	MQTTClient_create(&client, serverURI_b, clientID, MQTTCLIENT_PERSISTENCE_NONE, NULL);
+	serverURI = strdup(json_object_get_string(serverJSON));
+	AFB_NOTICE(serverURI);
+	// Create client with default persistence
+	MQTTClient_create(&client, serverURI, clientID, MQTTCLIENT_PERSISTENCE_NONE, NULL);
 	MQTTClient_setCallbacks(client, NULL, connlost, msgarrvd, delivered);	
 	
 	afb_req_success_f(req, NULL, "Client created with serverURI : '%s'", serverURI);	
@@ -97,10 +95,11 @@ void connectServer(afb_req req){
 	int connectTimeout = 100;
 	int rc;
 
-
-	//setenv("MQTT_C_CLIENT_TRACE", "ON", 1);
-	//setenv("MQTT_C_CLIENT_TRACE_LEVEL", "DEBUG", 1);
-
+#ifdef DEBUG
+   // Trace that shows the code flow
+   setenv("MQTT_C_CLIENT_TRACE", "ON", 1);
+   setenv("MQTT_C_CLIENT_TRACE_LEVEL", "DEBUG", 1);
+#endif
   //Search for various values................
 	
 	// Search for keepAlive value
@@ -163,11 +162,9 @@ void connectServer(afb_req req){
 	conn_opts.password = password;
 	AFB_NOTICE("Assigning connectTimeout");
 	connectTimeout = json_object_get_int(connectTimeoutJSON);
+	// set connection options
 	conn_opts.connectTimeout = connectTimeout;
-	//AFB_NOTICE("Assigning MQTT version");
 	conn_opts.MQTTVersion =  MQTTVERSION_DEFAULT;
-	// conn_opts.reliable =  1;
-	//conn_opts.serverURIcount++;
 	conn_opts.will = NULL;
 	conn_opts.reliable = 0;
 	conn_opts.ssl = NULL;
@@ -183,7 +180,8 @@ void connectServer(afb_req req){
 	}
 	else{
 		afb_req_fail_f(req, "ERROR", "failed with error '%d'", rc);
-	}	
+	}
+	// Creating a single afb_event for all MQTT events. The various MQTT events can be differentiated from the data fiel of the message recieved.	
 	message_arrived_event = afb_daemon_make_event(TOPIC);	
 	if(!afb_event_is_valid(message_arrived_event)){
 		AFB_NOTICE("Event is not valid");
@@ -209,12 +207,13 @@ void publish(afb_req req){
 	qos = atoi(qos_char);
 	retained = atoi(reatined_char);
 	
-	// put all valuse
+	// put all values
 	pubmsg.payload = payload;
 	AFB_NOTICE(payload);
 	pubmsg.payloadlen = strlen(payload);
 	pubmsg.qos = qos;
 	pubmsg.retained = retained;
+	// Publish message
 	MQTTClient_publishMessage(client, topic, &pubmsg, &token);
 	rc = MQTTClient_waitForCompletion(client, token, conn_opts.connectTimeout);
 
@@ -226,6 +225,7 @@ void publish(afb_req req){
 	}
 }
 
+/*-------------Subscribe messages from a particular topic-----------------*/
 void subscribe(afb_req req){
 
 	// TODO: Replace subscribe with subscribe many later.
@@ -235,6 +235,7 @@ void subscribe(afb_req req){
 	topic = afb_req_value(req, "topic");
 	qos = atoi(afb_req_value(req, "qos"));
 	AFB_NOTICE("topic is %s, qos is %d", topic, qos);
+	// Subscribe to a topic
 	rc = MQTTClient_subscribe(client, topic, qos);
 
 	afb_res = afb_req_subscribe(req, message_arrived_event);
@@ -249,7 +250,7 @@ void subscribe(afb_req req){
 		afb_req_fail_f(req, NULL, "Failed with returned code: '%d'", rc);
 	}
 }
-
+/*------------Unsubscribe messages from a particular topic----------------*/
 void unsubscribe(afb_req req){
 	//TODO: Replace subscribe with subscribe many later.
 	const char * topic = afb_req_value(req, "topic");
@@ -261,10 +262,12 @@ void unsubscribe(afb_req req){
 		afb_req_fail_f(req, NULL, "Failed with returned code: '%d'", rc);
 	}
 }
-
+/*--------------Disconnect the client from the server------------------*/
 void disconnectServer(afb_req req){
 	int rc;
+	// Disconnect from the server.
 	rc = MQTTClient_disconnect(client, conn_opts.connectTimeout);
+	// Destroy client object
 	MQTTClient_destroy(&client);
 	if(rc == MQTTCLIENT_SUCCESS){
 		afb_req_success(req, NULL, "success");
