@@ -4,12 +4,13 @@
 #include <json-c/json.h>
 #include <afb/afb-binding.h>
 #include "MQTTClient.h"
-#define CLIENTID "AGL-PAHO-C"
+#define TOPIC "MESSAGE RECEIVED"
 
 MQTTClient client;
 MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
-
+afb_event message_arrived_event;
 volatile MQTTClient_deliveryToken deliveredtoken;
+volatile char* payloadptr;
 
 
 void delivered(void *context, MQTTClient_deliveryToken dt)
@@ -26,17 +27,24 @@ void connlost(void *context, char *cause)
 
 int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *message)
 {
-    int i;
-    char* payloadptr;
-    AFB_NOTICE("Message arrived\n");
-    AFB_NOTICE("  topic: %s\n", topicName);
+    
+    int rc;
+    json_object *msg = json_object_new_object();
+    AFB_NOTICE("Message arrived");
+    AFB_NOTICE("  topic: %s", topicName);
     AFB_NOTICE("  message: ");
-    payloadptr = message->payload;
-    for(i=0; i<message->payloadlen; i++)
-    {
-        putchar(*payloadptr++);
-    }
-    AFB_NOTICE('\n');
+    AFB_NOTICE("Copying message to localpointer");
+    AFB_NOTICE("payloadlength = %d", message->payloadlen);
+    payloadptr = (char*)malloc(message->payloadlen);
+    snprintf(payloadptr, message->payloadlen+1, "%s", ((char *)message->payload));
+    AFB_NOTICE("Printing message: ");
+    AFB_NOTICE(payloadptr);
+    json_object_object_add(msg, "topic", json_object_new_string(topicName));
+    json_object_object_add(msg, "message", json_object_new_string(payloadptr));
+    rc = afb_event_push(message_arrived_event, msg);
+    if(rc == 0) {
+       AFB_NOTICE("No client subscribed !!");
+    } 
     MQTTClient_freeMessage(&message);
     MQTTClient_free(topicName);
     return 1;
@@ -46,25 +54,36 @@ int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *m
 
 void initMQTT (afb_req req){
 	json_object * jobj = afb_req_json(req);
-	json_object * serverJSON;
+	json_object * serverJSON, *clientidJSON;
 	const char * serverURI;
-	char * serverURI_b;
+	char * serverURI_b, *clientID;
 	// Search for serverURI value
 	json_bool success = json_object_object_get_ex(jobj, "serverURI", &serverJSON);
 	if(!success){
 		afb_req_fail_f(req, "ERROR", "server URI not found in '%s'", json_object_get_string(jobj));	
 	}
+	// Search for client_ID value
+	success = json_object_object_get_ex(jobj, "client_id", &clientidJSON);
+	if(!success){
+		afb_req_fail_f(req, "ERROR", "clientID not found in '%s'", json_object_get_string(jobj));	
+	}
 	// Validate serverURI value
 	if(json_object_get_type(serverJSON) != json_type_string){
-		afb_req_fail(req, "ERROR", "keepAlive is not an integer value");
+		afb_req_fail(req, "ERROR", "serverURI is not a string value");
+	}
+	// Validate client_ID value
+	if(json_object_get_type(clientidJSON) != json_type_string){
+		afb_req_fail(req, "ERROR", "keepAlive is not a string value");
 	}
 	serverURI = json_object_get_string(serverJSON);
 	AFB_NOTICE(serverURI);
+	clientID = strdup(json_object_get_string(clientidJSON));
+	AFB_NOTICE(clientID);
 	serverURI_b = strdup(json_object_get_string(serverJSON));
 	AFB_NOTICE(serverURI_b);
 
-	MQTTClient_create(&client, serverURI_b, CLIENTID, MQTTCLIENT_PERSISTENCE_NONE, NULL);
-	MQTTClient_setCallbacks(client, NULL, connlost, NULL, delivered);	
+	MQTTClient_create(&client, serverURI_b, clientID, MQTTCLIENT_PERSISTENCE_NONE, NULL);
+	MQTTClient_setCallbacks(client, NULL, connlost, msgarrvd, delivered);	
 	
 	afb_req_success_f(req, NULL, "Client created with serverURI : '%s'", serverURI);	
 }
@@ -164,6 +183,10 @@ void connectServer(afb_req req){
 	}
 	else{
 		afb_req_fail_f(req, "ERROR", "failed with error '%d'", rc);
+	}	
+	message_arrived_event = afb_daemon_make_event(TOPIC);	
+	if(!afb_event_is_valid(message_arrived_event)){
+		AFB_NOTICE("Event is not valid");
 	}
 
 }
@@ -188,10 +211,10 @@ void publish(afb_req req){
 	
 	// put all valuse
 	pubmsg.payload = payload;
+	AFB_NOTICE(payload);
 	pubmsg.payloadlen = strlen(payload);
 	pubmsg.qos = qos;
 	pubmsg.retained = retained;
-	MQTTClient_setCallbacks(client, NULL, connlost, msgarrvd, delivered);
 	MQTTClient_publishMessage(client, topic, &pubmsg, &token);
 	rc = MQTTClient_waitForCompletion(client, token, conn_opts.connectTimeout);
 
@@ -207,13 +230,18 @@ void subscribe(afb_req req){
 
 	// TODO: Replace subscribe with subscribe many later.
 	const char * topic;
-	int rc = 0;
+	int rc, afb_res;
 	int qos = 0;
 	topic = afb_req_value(req, "topic");
 	qos = atoi(afb_req_value(req, "qos"));
 	AFB_NOTICE("topic is %s, qos is %d", topic, qos);
-	MQTTClient_setCallbacks(client, NULL, connlost, msgarrvd, delivered);
 	rc = MQTTClient_subscribe(client, topic, qos);
+
+	afb_res = afb_req_subscribe(req, message_arrived_event);
+	if(afb_res != 0){
+		AFB_NOTICE("Event subscription failed");
+	}	
+	
 	if(rc == MQTTCLIENT_SUCCESS){
 		afb_req_success_f(req, NULL, "Subscribed to topic '%s' successfully", topic);
 	}
@@ -243,6 +271,10 @@ void disconnectServer(afb_req req){
 	}
 	else{
 		afb_req_fail_f(req, NULL, "Failed with returned code: '%d'", rc);
+	}
+	rc = afb_req_unsubscribe(req, message_arrived_event);
+	if(rc != 0){
+		AFB_NOTICE("unsubscribe daemon failed");
 	}
 }
 

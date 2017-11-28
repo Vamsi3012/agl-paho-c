@@ -1,6 +1,7 @@
-pahoc initMQTT {"serverURI":"tcp://127.0.0.1:1883"}
+pahoc initMQTT {"serverURI":"tcp://127.0.0.1:1883","client_id":"AGL-PAHO-C-1"}
+pahoc initMQTT {"serverURI":"tcp://127.0.0.1:1883","client_id":"AGL-PAHO-C-2"}
 
-pahoc connect {"keepAlive":1000, "connectTimeout":40000, "username":"sensor1@DEFAULT_TENANT","password":"hono-secret"}
+pahoc connect {"keepAlive":1000, "connectTimeout":40000, "username":"sensor2@DEFAULT_TENANT","password":"hono-secret"}
 
 pahoc pub {"topic": "Command" , "qos":0, "retained":0, "payload":"123"}
 
@@ -10,4 +11,4 @@ pahoc unsub {"topic": "Command"}
 
 pahoc disconnect
 
-check line 331
+curl -X POST -i -H 'Content-Type: application/json' -d '{"device-id": "4713"}' http://localhost:28080/registration/DEFAULT_TENANT

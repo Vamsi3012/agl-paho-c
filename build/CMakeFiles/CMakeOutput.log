@@ -29,28 +29,28 @@ The CXX compiler identification is GNU, found in "/home/vgn5kor/Apps/agl-paho-c/
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_0d102/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0d102.dir/build.make CMakeFiles/cmTC_0d102.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3ed5a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ed5a.dir/build.make CMakeFiles/cmTC_3ed5a.dir/build
 make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0d102.dir/testCCompiler.c.o
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_0d102.dir/testCCompiler.c.o   -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_0d102
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d102.dir/link.txt --verbose=1
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_0d102.dir/testCCompiler.c.o  -o cmTC_0d102 -rdynamic 
+Building C object CMakeFiles/cmTC_3ed5a.dir/testCCompiler.c.o
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_3ed5a.dir/testCCompiler.c.o   -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_3ed5a
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ed5a.dir/link.txt --verbose=1
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_3ed5a.dir/testCCompiler.c.o  -o cmTC_3ed5a -rdynamic 
 make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f1d88/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f1d88.dir/build.make CMakeFiles/cmTC_f1d88.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_557ea/fast"
+/usr/bin/make -f CMakeFiles/cmTC_557ea.dir/build.make CMakeFiles/cmTC_557ea.dir/build
 make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f1d88.dir/CMakeCCompilerABI.c.o
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_f1d88.dir/CMakeCCompilerABI.c.o   -c /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/share/cmake-3.6/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_f1d88
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1d88.dir/link.txt --verbose=1
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_f1d88.dir/CMakeCCompilerABI.c.o  -o cmTC_f1d88 -rdynamic  
+Building C object CMakeFiles/cmTC_557ea.dir/CMakeCCompilerABI.c.o
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_557ea.dir/CMakeCCompilerABI.c.o   -c /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/share/cmake-3.6/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_557ea
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_557ea.dir/link.txt --verbose=1
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_557ea.dir/CMakeCCompilerABI.c.o  -o cmTC_557ea -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc
 COLLECT_LTO_WRAPPER=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper
@@ -60,9 +60,9 @@ Thread model: posix
 gcc version 6.2.0 (GCC) 
 COMPILER_PATH=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/
 LIBRARY_PATH=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/
-COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_f1d88' '-rdynamic'
- /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/collect2 -plugin /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/liblto_plugin.so -plugin-opt=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJTCZ7M.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTC_f1d88 /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crt1.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crti.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtbegin.o -L/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_f1d88.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtend.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crtn.o
-COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_f1d88' '-rdynamic'
+COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_557ea' '-rdynamic'
+ /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/collect2 -plugin /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/liblto_plugin.so -plugin-opt=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRiwHf0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTC_557ea /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crt1.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crti.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtbegin.o -L/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_557ea.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtend.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crtn.o
+COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_557ea' '-rdynamic'
 make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
 
 
@@ -70,14 +70,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(x86_64-agl-linux-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f1d88/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f1d88.dir/build.make CMakeFiles/cmTC_f1d88.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_557ea/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_557ea.dir/build.make CMakeFiles/cmTC_557ea.dir/build]
   ignore line: [make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_f1d88.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_f1d88.dir/CMakeCCompilerABI.c.o   -c /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/share/cmake-3.6/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_f1d88]
-  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1d88.dir/link.txt --verbose=1]
-  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_f1d88.dir/CMakeCCompilerABI.c.o  -o cmTC_f1d88 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTC_557ea.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_557ea.dir/CMakeCCompilerABI.c.o   -c /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/share/cmake-3.6/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_557ea]
+  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_557ea.dir/link.txt --verbose=1]
+  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_557ea.dir/CMakeCCompilerABI.c.o  -o cmTC_557ea -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper]
@@ -87,13 +87,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 6.2.0 (GCC) ]
   ignore line: [COMPILER_PATH=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/]
   ignore line: [LIBRARY_PATH=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_f1d88' '-rdynamic']
-  link line: [ /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/collect2 -plugin /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/liblto_plugin.so -plugin-opt=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccJTCZ7M.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTC_f1d88 /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crt1.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crti.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtbegin.o -L/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_f1d88.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtend.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_557ea' '-rdynamic']
+  link line: [ /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/collect2 -plugin /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/liblto_plugin.so -plugin-opt=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRiwHf0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTC_557ea /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crt1.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crti.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtbegin.o -L/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_557ea.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtend.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crtn.o]
     arg [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccJTCZ7M.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccRiwHf0.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -109,7 +109,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f1d88] ==> ignore
+    arg [cmTC_557ea] ==> ignore
     arg [/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crt1.o] ==> ignore
     arg [/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crti.o] ==> ignore
     arg [/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtbegin.o] ==> ignore
@@ -123,7 +123,7 @@ Parsed C implicit link information from above output:
     arg [-O1] ==> ignore
     arg [--hash-style=gnu] ==> ignore
     arg [--as-needed] ==> ignore
-    arg [CMakeFiles/cmTC_f1d88.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_557ea.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -156,14 +156,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_eb968/fast"
-/usr/bin/make -f CMakeFiles/cmTC_eb968.dir/build.make CMakeFiles/cmTC_eb968.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_8505c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8505c.dir/build.make CMakeFiles/cmTC_8505c.dir/build
 make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_eb968.dir/feature_tests.c.o
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c11 -o CMakeFiles/cmTC_eb968.dir/feature_tests.c.o   -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_eb968
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eb968.dir/link.txt --verbose=1
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_eb968.dir/feature_tests.c.o  -o cmTC_eb968 -rdynamic 
+Building C object CMakeFiles/cmTC_8505c.dir/feature_tests.c.o
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c11 -o CMakeFiles/cmTC_8505c.dir/feature_tests.c.o   -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_8505c
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8505c.dir/link.txt --verbose=1
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_8505c.dir/feature_tests.c.o  -o cmTC_8505c -rdynamic 
 make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
 
 
@@ -176,14 +176,14 @@ make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMake
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_70bb9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_70bb9.dir/build.make CMakeFiles/cmTC_70bb9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_75b7c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_75b7c.dir/build.make CMakeFiles/cmTC_75b7c.dir/build
 make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_70bb9.dir/feature_tests.c.o
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c99 -o CMakeFiles/cmTC_70bb9.dir/feature_tests.c.o   -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_70bb9
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70bb9.dir/link.txt --verbose=1
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_70bb9.dir/feature_tests.c.o  -o cmTC_70bb9 -rdynamic 
+Building C object CMakeFiles/cmTC_75b7c.dir/feature_tests.c.o
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c99 -o CMakeFiles/cmTC_75b7c.dir/feature_tests.c.o   -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_75b7c
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75b7c.dir/link.txt --verbose=1
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_75b7c.dir/feature_tests.c.o  -o cmTC_75b7c -rdynamic 
 make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
 
 
@@ -196,14 +196,14 @@ make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMake
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_86891/fast"
-/usr/bin/make -f CMakeFiles/cmTC_86891.dir/build.make CMakeFiles/cmTC_86891.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2f0f9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2f0f9.dir/build.make CMakeFiles/cmTC_2f0f9.dir/build
 make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_86891.dir/feature_tests.c.o
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c90 -o CMakeFiles/cmTC_86891.dir/feature_tests.c.o   -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_86891
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86891.dir/link.txt --verbose=1
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_86891.dir/feature_tests.c.o  -o cmTC_86891 -rdynamic 
+Building C object CMakeFiles/cmTC_2f0f9.dir/feature_tests.c.o
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -std=c90 -o CMakeFiles/cmTC_2f0f9.dir/feature_tests.c.o   -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_2f0f9
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f0f9.dir/link.txt --verbose=1
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-gcc   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux  -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_2f0f9.dir/feature_tests.c.o  -o cmTC_2f0f9 -rdynamic 
 make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
 
 
@@ -214,28 +214,28 @@ make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMake
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_53b6c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_53b6c.dir/build.make CMakeFiles/cmTC_53b6c.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9c90c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9c90c.dir/build.make CMakeFiles/cmTC_9c90c.dir/build
 make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_53b6c.dir/testCXXCompiler.cxx.o
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_53b6c.dir/testCXXCompiler.cxx.o -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_53b6c
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53b6c.dir/link.txt --verbose=1
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_53b6c.dir/testCXXCompiler.cxx.o  -o cmTC_53b6c -rdynamic 
+Building CXX object CMakeFiles/cmTC_9c90c.dir/testCXXCompiler.cxx.o
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_9c90c.dir/testCXXCompiler.cxx.o -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_9c90c
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c90c.dir/link.txt --verbose=1
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_9c90c.dir/testCXXCompiler.cxx.o  -o cmTC_9c90c -rdynamic 
 make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_983a3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_983a3.dir/build.make CMakeFiles/cmTC_983a3.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_71f12/fast"
+/usr/bin/make -f CMakeFiles/cmTC_71f12.dir/build.make CMakeFiles/cmTC_71f12.dir/build
 make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_983a3.dir/CMakeCXXCompilerABI.cpp.o
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_983a3.dir/CMakeCXXCompilerABI.cpp.o -c /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_983a3
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_983a3.dir/link.txt --verbose=1
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_983a3.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_983a3 -rdynamic  
+Building CXX object CMakeFiles/cmTC_71f12.dir/CMakeCXXCompilerABI.cpp.o
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_71f12.dir/CMakeCXXCompilerABI.cpp.o -c /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_71f12
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71f12.dir/link.txt --verbose=1
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_71f12.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_71f12 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++
 COLLECT_LTO_WRAPPER=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper
@@ -245,9 +245,9 @@ Thread model: posix
 gcc version 6.2.0 (GCC) 
 COMPILER_PATH=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/
 LIBRARY_PATH=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/
-COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_983a3' '-rdynamic' '-shared-libgcc'
- /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/collect2 -plugin /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/liblto_plugin.so -plugin-opt=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0GzA28.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTC_983a3 /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crt1.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crti.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtbegin.o -L/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_983a3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtend.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crtn.o
-COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_983a3' '-rdynamic' '-shared-libgcc'
+COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_71f12' '-rdynamic' '-shared-libgcc'
+ /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/collect2 -plugin /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/liblto_plugin.so -plugin-opt=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7pEyPo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTC_71f12 /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crt1.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crti.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtbegin.o -L/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_71f12.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtend.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crtn.o
+COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_71f12' '-rdynamic' '-shared-libgcc'
 make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
 
 
@@ -255,14 +255,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(x86_64-agl-linux-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_983a3/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_983a3.dir/build.make CMakeFiles/cmTC_983a3.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_71f12/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_71f12.dir/build.make CMakeFiles/cmTC_71f12.dir/build]
   ignore line: [make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_983a3.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_983a3.dir/CMakeCXXCompilerABI.cpp.o -c /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_983a3]
-  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_983a3.dir/link.txt --verbose=1]
-  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_983a3.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_983a3 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_71f12.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -o CMakeFiles/cmTC_71f12.dir/CMakeCXXCompilerABI.cpp.o -c /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_71f12]
+  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_71f12.dir/link.txt --verbose=1]
+  ignore line: [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v CMakeFiles/cmTC_71f12.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_71f12 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++]
   ignore line: [COLLECT_LTO_WRAPPER=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper]
@@ -272,13 +272,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 6.2.0 (GCC) ]
   ignore line: [COMPILER_PATH=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/]
   ignore line: [LIBRARY_PATH=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/:/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_983a3' '-rdynamic' '-shared-libgcc']
-  link line: [ /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/collect2 -plugin /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/liblto_plugin.so -plugin-opt=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0GzA28.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTC_983a3 /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crt1.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crti.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtbegin.o -L/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_983a3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtend.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='--sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux' '-march=corei7' '-mtune=corei7' '-mfpmath=sse' '-msse4.2' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_71f12' '-rdynamic' '-shared-libgcc']
+  link line: [ /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/collect2 -plugin /opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/liblto_plugin.so -plugin-opt=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7pEyPo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib/ld-linux-x86-64.so.2 -o cmTC_71f12 /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crt1.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crti.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtbegin.o -L/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/lib/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/x86_64-agl-linux/6.2.0 -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/lib -L/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_71f12.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtend.o /opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crtn.o]
     arg [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/libexec/x86_64-agl-linux/gcc/x86_64-agl-linux/6.2.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc0GzA28.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc7pEyPo.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -294,7 +294,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_983a3] ==> ignore
+    arg [cmTC_71f12] ==> ignore
     arg [/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crt1.o] ==> ignore
     arg [/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/crti.o] ==> ignore
     arg [/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux/usr/lib/../lib/x86_64-agl-linux/6.2.0/crtbegin.o] ==> ignore
@@ -308,7 +308,7 @@ Parsed CXX implicit link information from above output:
     arg [-O1] ==> ignore
     arg [--hash-style=gnu] ==> ignore
     arg [--as-needed] ==> ignore
-    arg [CMakeFiles/cmTC_983a3.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_71f12.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -339,14 +339,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_83435/fast"
-/usr/bin/make -f CMakeFiles/cmTC_83435.dir/build.make CMakeFiles/cmTC_83435.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_457df/fast"
+/usr/bin/make -f CMakeFiles/cmTC_457df.dir/build.make CMakeFiles/cmTC_457df.dir/build
 make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_83435.dir/feature_tests.cxx.o
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++14 -o CMakeFiles/cmTC_83435.dir/feature_tests.cxx.o -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_83435
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83435.dir/link.txt --verbose=1
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_83435.dir/feature_tests.cxx.o  -o cmTC_83435 -rdynamic 
+Building CXX object CMakeFiles/cmTC_457df.dir/feature_tests.cxx.o
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++14 -o CMakeFiles/cmTC_457df.dir/feature_tests.cxx.o -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_457df
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_457df.dir/link.txt --verbose=1
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_457df.dir/feature_tests.cxx.o  -o cmTC_457df -rdynamic 
 make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
 
 
@@ -412,14 +412,14 @@ make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMake
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_52fda/fast"
-/usr/bin/make -f CMakeFiles/cmTC_52fda.dir/build.make CMakeFiles/cmTC_52fda.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_addef/fast"
+/usr/bin/make -f CMakeFiles/cmTC_addef.dir/build.make CMakeFiles/cmTC_addef.dir/build
 make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_52fda.dir/feature_tests.cxx.o
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++11 -o CMakeFiles/cmTC_52fda.dir/feature_tests.cxx.o -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_52fda
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52fda.dir/link.txt --verbose=1
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_52fda.dir/feature_tests.cxx.o  -o cmTC_52fda -rdynamic 
+Building CXX object CMakeFiles/cmTC_addef.dir/feature_tests.cxx.o
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++11 -o CMakeFiles/cmTC_addef.dir/feature_tests.cxx.o -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_addef
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_addef.dir/link.txt --verbose=1
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_addef.dir/feature_tests.cxx.o  -o cmTC_addef -rdynamic 
 make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
 
 
@@ -485,14 +485,14 @@ make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMake
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_de462/fast"
-/usr/bin/make -f CMakeFiles/cmTC_de462.dir/build.make CMakeFiles/cmTC_de462.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_952ca/fast"
+/usr/bin/make -f CMakeFiles/cmTC_952ca.dir/build.make CMakeFiles/cmTC_952ca.dir/build
 make[1]: Entering directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_de462.dir/feature_tests.cxx.o
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++98 -o CMakeFiles/cmTC_de462.dir/feature_tests.cxx.o -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_de462
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de462.dir/link.txt --verbose=1
-/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_de462.dir/feature_tests.cxx.o  -o cmTC_de462 -rdynamic 
+Building CXX object CMakeFiles/cmTC_952ca.dir/feature_tests.cxx.o
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux    -O2 -pipe -g -feliminate-unused-debug-types     -std=c++98 -o CMakeFiles/cmTC_952ca.dir/feature_tests.cxx.o -c /home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_952ca
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_952ca.dir/link.txt --verbose=1
+/opt/poky-agl/4.0.2/sysroots/x86_64-aglsdk-linux/usr/bin/x86_64-agl-linux/x86_64-agl-linux-g++   -march=corei7 -mtune=corei7 -mfpmath=sse -msse4.2 --sysroot=/opt/poky-agl/4.0.2/sysroots/corei7-64-agl-linux   -O2 -pipe -g -feliminate-unused-debug-types     -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  CMakeFiles/cmTC_952ca.dir/feature_tests.cxx.o  -o cmTC_952ca -rdynamic 
 make[1]: Leaving directory '/home/vgn5kor/Apps/agl-paho-c/build/CMakeFiles/CMakeTmp'
 
 
