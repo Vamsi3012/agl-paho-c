@@ -10,7 +10,6 @@ MQTTClient client;
 MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
 afb_event message_arrived_event;
 volatile MQTTClient_deliveryToken deliveredtoken;
-volatile char* payloadptr;
 
 /*-------------------Callback functions---------------------*/
 void delivered(void *context, MQTTClient_deliveryToken dt)
@@ -29,6 +28,7 @@ int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *m
 {
     
     int rc;
+    char* payloadptr;
     json_object *msg = json_object_new_object();
     AFB_NOTICE("Message arrived");
     AFB_NOTICE("  topic: %s", topicName);
@@ -53,9 +53,10 @@ int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *m
 /*-----------Create client with necessary data---------------*/
 
 void initMQTT (afb_req req){
+	int rc;
 	json_object * jobj = afb_req_json(req);
 	json_object * serverJSON, *clientidJSON;
-	const * serverURI;
+	char* serverURI;
 	char *clientID;
 	// Search for serverURI value
 	json_bool success = json_object_object_get_ex(jobj, "serverURI", &serverJSON);
@@ -80,10 +81,11 @@ void initMQTT (afb_req req){
 	serverURI = strdup(json_object_get_string(serverJSON));
 	AFB_NOTICE(serverURI);
 	// Create client with default persistence
-	MQTTClient_create(&client, serverURI, clientID, MQTTCLIENT_PERSISTENCE_NONE, NULL);
+	rc = MQTTClient_create(&client, serverURI, clientID, MQTTCLIENT_PERSISTENCE_NONE, NULL);
 	MQTTClient_setCallbacks(client, NULL, connlost, msgarrvd, delivered);	
-	
-	afb_req_success_f(req, NULL, "Client created with serverURI : '%s'", serverURI);	
+	if(rc == MQTTCLIENT_SUCCESS){
+	    afb_req_success_f(req, NULL, "Client created with serverURI : '%s'", serverURI);
+	}	
 }
 
 /*-----------------Connect Client to Server------------------*/
@@ -210,9 +212,10 @@ void publish(afb_req req){
 	// put all values
 	pubmsg.payload = payload;
 	AFB_NOTICE(payload);
-	pubmsg.payloadlen = strlen(payload);
+	pubmsg.payloadlen = (int)strlen(payload);
 	pubmsg.qos = qos;
 	pubmsg.retained = retained;
+
 	// Publish message
 	MQTTClient_publishMessage(client, topic, &pubmsg, &token);
 	rc = MQTTClient_waitForCompletion(client, token, conn_opts.connectTimeout);
@@ -284,12 +287,15 @@ void disconnectServer(afb_req req){
 
 /*---------------paho.mqtt.c binding for AGL-----------------*/
 
-void init() {
-	AFB_NOTICE("agl-pahoc is starting....init");
+int init() {
+	AFB_NOTICE("On Terminal 1: afb-daemon --port=1234 --workdir=root_directory/build/package --ldpaths=lib --roothttp=htdocs  --token=1 --tracereq=common --verbose");
+	AFB_NOTICE("On Terminal 2: afb-client-demo -H ws://localhost:1234/api?token=1");
+	return 0;
 }
 
-void preinit() {
+int preinit() {
 	AFB_NOTICE("agl-pahoc is starting....preinit");
+	return 0;
 }
 
 static const struct afb_verb_v2 verbs[] = {
