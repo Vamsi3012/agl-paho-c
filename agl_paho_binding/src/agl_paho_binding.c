@@ -3,15 +3,16 @@
 #include <string.h>
 #include <json-c/json.h>
 #include <afb/afb-binding.h>
-#include "MQTTClient.h"
+#include "MQTTAsync.h"
 #define TOPIC "MESSAGE RECEIVED"
 
-MQTTClient client;
-MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
+MQTTAsync client;
+MQTTAsync_connectOptions conn_opts = MQTTAsync_connectOptions_initializer;
 afb_event message_arrived_event;
-volatile MQTTClient_deliveryToken deliveredtoken;
+volatile MQTTAsync_token deliveredtoken;
 volatile char* payloadptr;
 
+int finished = 0;
 /*-------------------Callback functions---------------------*/
 void delivered(void *context, MQTTClient_deliveryToken dt)
 {
@@ -21,8 +22,69 @@ void delivered(void *context, MQTTClient_deliveryToken dt)
 
 void connlost(void *context, char *cause)
 {
-    AFB_NOTICE("\nConnection lost\n");
-    AFB_NOTICE("   cause: %s\n", cause);
+     MQTTAsync client = (MQTTAsync)context;
+     MQTTAsync_connectOptions conn_opts = MQTTAsync_connectOptions_initializer;
+     int rc;
+     AFB_NOTICE("\nConnection lost\n");
+     AFB_NOTICE("     cause: %s\n", cause);
+     AFB_NOTICE("Reconnecting\n");
+     conn_opts.keepAliveInterval = 20;
+     conn_opts.cleansession = 1;
+     if ((rc = MQTTAsync_connect(client, &conn_opts)) != MQTTASYNC_SUCCESS)
+     {
+             AFB_NOTICE("Failed to start connect, return code %d\n", rc);
+             finished = 1;
+    }
+    //AFB_NOTICE("\nConnection lost\n");
+    //AFB_NOTICE("   cause: %s\n", cause);
+}
+
+void onDisconnect(void* context, MQTTAsync_successData* response)
+{
+        AFB_NOTICE("Successful disconnection\n");
+        finished = 1;
+}
+
+void onSend(void* context, MQTTAsync_successData* response)
+{
+        MQTTAsync client = (MQTTAsync)context;
+        MQTTAsync_disconnectOptions opts = MQTTAsync_disconnectOptions_initializer;
+        int rc;
+        AFB_NOTICE("Message with token value %d delivery confirmed\n", response->token);
+        opts.onSuccess = onDisconnect;
+        opts.context = client;
+        if ((rc = MQTTAsync_disconnect(client, &opts)) != MQTTASYNC_SUCCESS)
+        {
+                printf("Failed to start sendMessage, return code %d\n", rc);
+                exit(EXIT_FAILURE);
+        }
+}
+
+void onConnectFailure(void* context, MQTTAsync_failureData* response)
+{
+        AFB_NOTICE"Connect failed, rc %d\n", response ? response->code : 0);
+        finished = 1;
+}
+
+void onConnect(void* context, MQTTAsync_successData* response)
+{
+        MQTTAsync client = (MQTTAsync)context;
+        MQTTAsync_responseOptions opts = MQTTAsync_responseOptions_initializer;
+        MQTTAsync_message pubmsg = MQTTAsync_message_initializer;
+        int rc;
+        AFB_NOTICE("Successful connection\n");
+        opts.onSuccess = onSend;
+        opts.context = client;
+        pubmsg.payload = PAYLOAD;
+        pubmsg.payloadlen = strlen(PAYLOAD);
+        pubmsg.qos = QOS;
+        pubmsg.retained = 0;
+        deliveredtoken = 0;
+        if ((rc = MQTTAsync_sendMessage(client, TOPIC, &pubmsg, &opts)) != MQTTASYNC_SUCCESS)
+        {
+                printf("Failed to start sendMessage, return code %d\n", rc);
+                exit(EXIT_FAILURE);
+        }
 }
 
 int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *message)
@@ -53,6 +115,7 @@ int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *m
 /*-----------Create client with necessary data---------------*/
 
 void initMQTT (afb_req req){
+	int rc;
 	json_object * jobj = afb_req_json(req);
 	json_object * serverJSON, *clientidJSON;
 	const * serverURI;
@@ -80,8 +143,8 @@ void initMQTT (afb_req req){
 	serverURI = strdup(json_object_get_string(serverJSON));
 	AFB_NOTICE(serverURI);
 	// Create client with default persistence
-	MQTTClient_create(&client, serverURI, clientID, MQTTCLIENT_PERSISTENCE_NONE, NULL);
-	MQTTClient_setCallbacks(client, NULL, connlost, msgarrvd, delivered);	
+	MQTTAsync_create(&client, ADDRESS, clientID, MQTTCLIENT_PERSISTENCE_NONE, NULL);
+	MQTTAsync_setCallbacks(client, NULL, connlost, msgarrvd, delivered);	
 	
 	afb_req_success_f(req, NULL, "Client created with serverURI : '%s'", serverURI);	
 }
@@ -168,6 +231,9 @@ void connectServer(afb_req req){
 	conn_opts.will = NULL;
 	conn_opts.reliable = 0;
 	conn_opts.ssl = NULL;
+	conn_opts.onSuccess = onConnect;
+        conn_opts.onFailure = onConnectFailure;
+        conn_opts.context = client;	
 	
 
 	//connect client to server
@@ -226,7 +292,7 @@ void publish(afb_req req){
 }
 
 /*-------------Subscribe messages from a particular topic-----------------*/
-void subscribe(afb_req req){
+/*void subscribe(afb_req req){
 
 	// TODO: Replace subscribe with subscribe many later.
 	const char * topic;
@@ -249,9 +315,9 @@ void subscribe(afb_req req){
 	else{
 		afb_req_fail_f(req, NULL, "Failed with returned code: '%d'", rc);
 	}
-}
+}*/
 /*------------Unsubscribe messages from a particular topic----------------*/
-void unsubscribe(afb_req req){
+/*void unsubscribe(afb_req req){
 	//TODO: Replace subscribe with subscribe many later.
 	const char * topic = afb_req_value(req, "topic");
 	int rc = MQTTClient_unsubscribe(client, topic);
@@ -261,9 +327,9 @@ void unsubscribe(afb_req req){
 	else{
 		afb_req_fail_f(req, NULL, "Failed with returned code: '%d'", rc);
 	}
-}
+}*/
 /*--------------Disconnect the client from the server------------------*/
-void disconnectServer(afb_req req){
+/*void disconnectServer(afb_req req){
 	int rc;
 	// Disconnect from the server.
 	rc = MQTTClient_disconnect(client, conn_opts.connectTimeout);
@@ -279,7 +345,7 @@ void disconnectServer(afb_req req){
 	if(rc != 0){
 		AFB_NOTICE("unsubscribe daemon failed");
 	}
-}
+}*/
 
 
 /*---------------paho.mqtt.c binding for AGL-----------------*/
@@ -295,10 +361,10 @@ void preinit() {
 static const struct afb_verb_v2 verbs[] = {
 	{.verb = "initMQTT", .session = AFB_SESSION_NONE, .callback =initMQTT, .auth = NULL},
 	{.verb = "connect", .session = AFB_SESSION_NONE, .callback =connectServer, .auth = NULL},
-	{.verb = "disconnect", .session = AFB_SESSION_NONE, .callback =disconnectServer, .auth = NULL},
-	{.verb = "pub", .session = AFB_SESSION_NONE, .callback =publish, .auth = NULL},
-	{.verb = "sub", .session = AFB_SESSION_NONE, .callback =subscribe, .auth = NULL},
-	{.verb = "unsub", .session = AFB_SESSION_NONE, .callback =unsubscribe, .auth = NULL}		
+	/*{.verb = "disconnect", .session = AFB_SESSION_NONE, .callback =disconnectServer, .auth = NULL},*/
+	{.verb = "pub", .session = AFB_SESSION_NONE, .callback =publish, .auth = NULL}
+	/*{.verb = "sub", .session = AFB_SESSION_NONE, .callback =subscribe, .auth = NULL},
+	{.verb = "unsub", .session = AFB_SESSION_NONE, .callback =unsubscribe, .auth = NULL}*/		
 };
 
 const struct afb_binding_v2 afbBindingV2 = {
