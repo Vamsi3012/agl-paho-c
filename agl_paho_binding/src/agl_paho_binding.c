@@ -299,12 +299,12 @@ int preinit() {
 }
 
 static const struct afb_verb_v2 verbs[] = {
-	{.verb = "initMQTT", .session = AFB_SESSION_NONE, .callback =initMQTT, .auth = NULL},
-	{.verb = "connect", .session = AFB_SESSION_NONE, .callback =connectServer, .auth = NULL},
-	{.verb = "disconnect", .session = AFB_SESSION_NONE, .callback =disconnectServer, .auth = NULL},
-	{.verb = "pub", .session = AFB_SESSION_NONE, .callback =publish, .auth = NULL},
-	{.verb = "sub", .session = AFB_SESSION_NONE, .callback =subscribe, .auth = NULL},
-	{.verb = "unsub", .session = AFB_SESSION_NONE, .callback =unsubscribe, .auth = NULL}		
+	{.verb = "initMQTT", .session = AFB_SESSION_NONE, .callback =initMQTT, .auth = NULL, .info="Creates a client and initialises it with default values"},
+	{.verb = "connect", .session = AFB_SESSION_NONE, .callback =connectServer, .auth = NULL, .info="Connects client to the specified server"},
+	{.verb = "disconnect", .session = AFB_SESSION_NONE, .callback =disconnectServer, .auth = NULL, .info="Disconnects the client from the server"},
+	{.verb = "pub", .session = AFB_SESSION_NONE, .callback =publish, .auth = NULL, .info="publish a message to a particular topic"},
+	{.verb = "sub", .session = AFB_SESSION_NONE, .callback =subscribe, .auth = NULL, .info="subscrube to messages of a particular topic"},
+	{.verb = "unsub", .session = AFB_SESSION_NONE, .callback =unsubscribe, .auth = NULL, .info="subscrube to messages of a particular topic"}		
 };
 
 const struct afb_binding_v2 afbBindingV2 = {
