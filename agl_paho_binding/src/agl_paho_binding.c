@@ -34,7 +34,7 @@ int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *m
     AFB_NOTICE("  topic: %s", topicName);
     AFB_NOTICE("  message: ");
     AFB_NOTICE("Copying message to localpointer");
-    AFB_NOTICE("payloadlength = %d", message->payloadlen);
+    AFB_NOTICE("payloadlength = %d", message->payloadlen+1);
     payloadptr = (char*)malloc(message->payloadlen);
     snprintf(payloadptr, message->payloadlen+1, "%s", ((char *)message->payload));
     AFB_NOTICE("Printing message: ");
