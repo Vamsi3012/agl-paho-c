@@ -45,7 +45,6 @@ set(PROJECT_APP_TEMPLATES_DIR "conf.d/app-templates")
 # Compilation Mode (DEBUG, RELEASE)
 # ----------------------------------
 set(CMAKE_BUILD_TYPE "DEBUG")
-set(USE_EFENCE 1)
 
 # Kernel selection if needed. You can choose between a
 # mandatory version to impose a minimal version.
@@ -69,9 +68,7 @@ set (gcc_minimal_version 4.9)
 # -----------------------------
 set (PKG_REQUIRED_LIST
 	json-c
-	libsystemd>=222
 	afb-daemon
-	libmicrohttpd>=0.9.55
 )
 
 # Prefix path where will be installed the files
