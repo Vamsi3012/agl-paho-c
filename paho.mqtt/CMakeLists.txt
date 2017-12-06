@@ -1,6 +1,6 @@
 include(${CMAKE_ROOT}/Modules/ExternalProject.cmake)
 
-set(prefix ${CMAKE_BINARY_DIR}/local)
+set(local ${CMAKE_BINARY_DIR}/local)
 
 ExternalProject_Add(
 	external-paho-mqtt
@@ -8,7 +8,7 @@ ExternalProject_Add(
 		GIT_TAG origin/master
 		GIT_SHALLOW TRUE
 		GIT_PROGRESS TRUE
-		CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${prefix}
+		CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${local} -DCMAKE_INSTALL_LIBDIR=lib
 )
 
 PROJECT_TARGET_ADD(paho-mqtt)
@@ -19,7 +19,7 @@ add_dependencies(${TARGET_NAME} external-paho-mqtt)
 
 set_target_properties(${TARGET_NAME} PROPERTIES
 	LABELS LIBRARY
-	IMPORTED_LOCATION ${prefix}/lib64/libpaho-mqtt3c.so
+	IMPORTED_LOCATION ${local}/lib/libpaho-mqtt3c.so
 )
 
 
