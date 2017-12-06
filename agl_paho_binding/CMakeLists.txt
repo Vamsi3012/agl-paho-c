@@ -16,19 +16,15 @@ add_library(
 )
 
 # Binder exposes a unique public entry point 
-SET_TARGET_PROPERTIES(agl-paho-c PROPERTIES
+SET_TARGET_PROPERTIES(${TARGET_NAME} PROPERTIES
 	PREFIX "afb-"
         LABELS "BINDING"
-	LINK_FLAGS  ${BINDINGS_LINK_FLAG}
-        OUTPUT_NAME ${TARGET_NAME}
+	LINK_FLAGS  "${BINDINGS_LINK_FLAG}"
+        OUTPUT_NAME "${TARGET_NAME}"
+	BUILD_RPATH "\$ORIGIN"
+	INSTALL_RPATH "\$ORIGIN"
 )
 
-#Link all necessary libraries
-target_link_libraries(${TARGET_NAME} ${link_libraries} libpaho-mqtt3c.so)
-
-
-
-
-
-
+target_link_libraries(${TARGET_NAME} paho-mqtt)
+target_include_directories(${TARGET_NAME} PUBLIC ${CMAKE_BINARY_DIR}/local/include)
 
