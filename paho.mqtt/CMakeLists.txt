@@ -19,7 +19,7 @@ add_dependencies(${TARGET_NAME} external-paho-mqtt)
 
 set_target_properties(${TARGET_NAME} PROPERTIES
 	LABELS LIBRARY
-	IMPORTED_LOCATION ${local}/lib/libpaho-mqtt3c.so
+	IMPORTED_LOCATION ${local}/lib/libpaho-mqtt3c.so.1
 )
 
 
