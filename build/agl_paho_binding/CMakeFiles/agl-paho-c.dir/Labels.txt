@@ -1,4 +1,0 @@
-# Target labels
- BINDING
-# Source files and their labels
-/home/vgn5kor/Apps/agl-paho-c/agl_paho_binding/src/agl_paho_binding.c
